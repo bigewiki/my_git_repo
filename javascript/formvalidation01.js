@@ -29,3 +29,16 @@
     console.log(validatorLink);
     document.getElementById('validator').innerHTML = validatorLink;
   }
+
+  function radioCheck() {
+    var drinkChoices = document.forms[0].radioButtons;
+    var strMsg = "Don't forget the booze!";
+    for (var i = 0; i < drinkChoices.length; i++) {
+      if (drinkChoices[i].checked == true) {
+        strMsg = "OK";
+        break;
+      }
+    }
+    document.getElementById('radioButtonsE').innerHTML = strMsg;
+
+  }

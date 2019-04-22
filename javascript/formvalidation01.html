@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <!-- First form validation. 4/20/2019
+<!-- First form validation. 4/20/2019
           Jeff Stokes
             CIS 166 -->
 
@@ -15,11 +15,18 @@
   <title>Form Validation</title>
   <script>
     window.onload = setupStuff;
-    // functions for menus
+    // these two functions create the menus
     setupStuff();
     createMenu();
-    // function for validator link
+    // this function creates the validator link at the bottom
     createValidator();
+    // this function checks to see if the radio buttons are selected
+    radioCheck();
+
+
+
+    document.getElementById('radioButtonsE').onclick = radioCheck;
+	  document.getElementById('radioButtonsE').onmouseover = radioCheck;
   </script>
 
 </head>
@@ -32,15 +39,13 @@
       <fieldset>
         <legend>Personal Information</legend>
         <label for="name">Name</label>
-        <input type="text" id="fname" name="name" minimumlength="3"
-               required><span id="nameCheck"> *</span> <br />
+        <input type="text" id="fname" name="name" minimumlength="3" required><span id="nameCheck"> *</span> <br />
         <br>
         <label for="quantity">Quantity</label>
         <input type="text" id="number" name="quantity"><span id="numCheck"></span> <br />
         <br>
         <label for="password">Password</label>
-        <input type="password" id="secret" name="password" minimumlength="8"
-               maxlength="25" required><span id="passCheck"> *</span> <br />
+        <input type="password" id="secret" name="password" minimumlength="8" maxlength="25" required><span id="passCheck"> *</span> <br />
         <br>
       </fieldset>
 
@@ -50,7 +55,7 @@
           <select name="day" id="dayMenu">
           </select>
           <br />
-          <select name="year"  id="yearMenu">
+          <select name="year" id="yearMenu">
           </select>
           <br />
           <select name="month" id="monthMenu">
@@ -60,25 +65,26 @@
       </fieldset>
       <fieldset>
         <legend>Comments</legend>
-        <textarea name="comments" rows="8" cols="80" maxlength="500"
-          placeholder="Enter your comments here."></textarea>
+        <textarea name="comments" rows="8" cols="80" maxlength="500" placeholder="Enter your comments here."></textarea>
       </fieldset>
-      <fieldset>
+      <fieldset id="radioButtons">
         <legend>A little about yourself</legend>
-        <div>
-          <p>Favorite type of beer?</p>
+
+        <p>Favorite type of beer?</p>
         <input type="radio" name="option" value="Stout"> Stout
         <input type="radio" name="option" value="IPA"> IPA
         <input type="radio" name="option" value="blonde"> Blonde
         <input type="radio" name="option" value="lager"> Lager
-      </div>
-      <div>
+
+
         <p>Favorite cocktail?</p>
         <input type="radio" name="option" value="moscowMule"> Moscow Mule
         <input type="radio" name="option" value="whiskeySour">Whiskey Sour
         <input type="radio" name="option" value="margarita"> Margarita
         <input type="radio" name="option" value="bloodyMary"> Bloody Mary
-      </div>
+        <br><br>
+        <span id="radioButtonsE">You must choose one.</span>
+
       </fieldset>
       <fieldset>
         <legend>What types of vacations do you prefer?</legend>
