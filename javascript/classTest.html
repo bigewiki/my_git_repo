@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script type="text/javascript">
+    window.onload = function() {
+
+      var today = new Date();
+
+      switch (today.getHours()) {
+        case 17:
+        case 18:
+          msg = "my 5-7pm class is probably running";
+          break;
+        case 19:
+        case 20:
+        case 21:
+          msg = "my 7-10pm class of miscreants is running";
+          break;
+        case 22:
+          msg = "I can leave school soon as it is 10pm"
+          break;
+        default:
+          msg = "The time is not between 5-10 pm"
+      }
+
+      document.getElementById('switch').innerHTML = msg
+
+      var age = 25;
+      
+      //if else statement
+      if (age >= 18 && age <= 21) {
+        msg1 = "You can vote and join the military!";
+      } else if (age >= 21) {
+        msg1 = "You can drink now!!"
+      } else {
+        msg1 = "You are not in an age group that I am testing."
+      }
+
+      document.getElementById('results').innerHTML = msg1;
+
+      //ternary operator
+      var skills = "javascript";
+      salaryOffer = (skills == "javascript") ? 50000 : 30000;
+
+      document.getElementById('salary').innerHTML = salaryOffer;
+
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #f3f3f3;
+    }
+  </style>
+
+</head>
+
+<body>
+  <p id="results">results go here</p>
+  <p id="switch"></p>
+  <div id="salary"></div>
+
+
+</body>
+
+</html>

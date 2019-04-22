@@ -1,0 +1,25 @@
+* {
+  font-family: sans-serif;
+}
+html {
+  margin-top: 10px;
+}
+
+#container {
+  max-width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+  border: solid 3px black;
+  border-radius: .8em;
+  box-shadow: 3px 3px 10px grey;
+
+}
+
+form {
+  margin: 4px 4px 4px 4px;
+  background-color: #ffffff;
+  border-radius: .5em;
+}
+fieldset {
+  border-radius: .5em;
+}

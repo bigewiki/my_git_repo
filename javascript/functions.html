@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script type="text/javascript">
+    window.onload = function() {
+      function isLeapYear(yearToTest) {
+        if (yearToTest % 4 != 0) {
+          return false;
+        } else if (yearToTest % 100 == 0) {
+          if (yearToTest % 400 == 0) {
+            return true;
+          } else {
+            return false;
+          }
+        } else {
+          return true;
+        }
+      }
+      var result = isLeapYear(2100);
+
+      document.getElementById('result1').innerHTML = "The year 2100 is a leap year? " + result;
+
+      var blah = 2020;
+      if (isLeapYear(blah)) {
+        msg = "Yes it is a leap year";
+      } else {
+        msg = "no it is NOT a leap year";
+      }
+
+      document.getElementById('result2').innerHTML = blah + " " + msg;
+    }
+  </script>
+</head>
+
+<body>
+  <p id="result1"></p>
+  <p id="result2"></p>
+</body>
+
+</html>

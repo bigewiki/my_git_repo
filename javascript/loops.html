@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <script type="text/javascript">
+    window.onload = function() {
+
+      //for loop
+      var menu = '<select name="dayofmonth" id="dayofmonth">';
+      menu += '<option value="">Please choose the day of month</option>';
+      for (var i = 1; i <= 31; i++) {
+        menu += '<option value="' + i + '">' + i + '</option>';
+      }
+      menu += '</select>';
+
+      document.getElementById('menu').innerHTML = menu;
+
+
+      //while loop
+      var i = 1980
+
+      var menu1 = '<select name="dayofmonth" id="dayofmonth">';
+      menu1 += '<option value="">Please choose the year you were born</option>';
+
+      while (i <= 2019) {
+        menu1 += '<option value="' + i + '">' + i + '</option>';
+        i++;
+      }
+
+      menu1 += '</select>';
+
+      document.getElementById('menu1').innerHTML = menu1;
+
+      //do..while loop
+      var i = 31;
+      var msg = "count down: "
+      console.log(msg)
+      do {
+        //msg += "i ";
+        console.log(i)
+        i--;
+      } while (i >= 0)
+
+      //labeled statement
+      var i = 100;
+
+      secondTimer:
+      while (i >= 20) {
+        console.log(1 + " ")
+        i--;
+        if (i === 20) {
+          console.log("Twenty Seconds More");
+          break secondTimer;
+        }
+      }
+
+      secondTimer:
+      while (i >= 10) {
+        console.log(i + " ")
+        i--;
+        if (i === 10) {
+          console.log("Ten Second Warning");
+          break secondTimer;
+        }
+      }
+
+      secondTimer:
+        while (i >= 0) {
+          console.log(i + " ")
+          i--;
+          if (i === 0) {
+            console.log("Big Bada Boom!");
+          }
+        }
+
+
+
+    }
+  </script>
+</head>
+
+<body>
+  <p id="menu"></p>
+  <p id="menu1"></p>
+</body>
+
+</html>

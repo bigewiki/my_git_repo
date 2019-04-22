@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- I "borrowed" a few things that I learned from inspecting Scott's page.
+  Those things were the prompt() Method and the toFixed() Method.
+  I have to give credit where it is due. Thanks Scott!
+  I also got some input from a friend of mine who suggested the parseFloat()
+  and isNaN() to fix an issue I was having where a random number was generated even if a value
+  was given. TIL alot!!-->
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Conditionals</title>
+
+  <style>
+    h1 {font-size: 16px;}
+  </style>
+
+  <script type="text/javascript">
+    window.onload = function() {
+
+      var totalSales = parseFloat(prompt("Enter Sales Amount (If you just click 'OK' an amount will be randomly generated) "))
+
+      if (isNaN(totalSales)) {
+        var min = 1;
+        var max = 1000;
+        totalSales = Math.random() * (+max - +min) + +min;
+      }
+
+
+      if (totalSales <= 100) {
+        discount = 0
+      } else if (totalSales > 100 && totalSales <= 399) {
+        discount = .10
+      } else if (totalSales >= 400 && totalSales <= 500) {
+        discount = .12
+      } else {
+        discount = .14
+      }
+
+      finalCost = totalSales - totalSales * discount
+
+
+      document.getElementById('final').innerHTML = '$' + finalCost.toFixed(2);
+      document.getElementById('percentoff').innerHTML = (discount * 100).toFixed(0) + '%';
+      document.getElementById('amount').innerHTML = '$' + (totalSales * discount).toFixed(2);
+      document.getElementById('sales').innerHTML = '$' + totalSales.toFixed(2);
+
+
+
+    }
+  </script>
+
+
+</head>
+
+<body>
+  <h1>Total Sales</h1>
+  <p id="sales"></p>
+  <h1>Percent Off</h1>
+  <p id="percentoff"></p>
+  <h1>Discount Amount</h1>
+  <p id="amount"></p>
+  <h1>Final Cost</h1>
+  <p id="final"></p>
+
+
+
+  <div id="validator">
+    <a href="http://validator.w3.org/nu/?doc=https://nbtl.mesacc.edu/jstokes/javascript/conditionals.html">
+      HTML 5 VALIDATION </a>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Function to Fix</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="dcterms.rightsHolder" content="Name of Copyright Holder" />
+<meta name="dcterms.dateCopyrighted" content="2012" />
+<meta name="description" content="A short description of the page" />
+<meta name="keywords" content="keywords describing this page, most search engines
+ignore this now due to abuse"/>
+<script src="validator.js"></script>
+<script>
+window.onload = setupStuff;
+
+function setupStuff()
+{
+	var today = new Date();
+	var lastDay = new Date(today.getFullYear(), today.getMonth() +1, 0).getDate();
+	createMenu(1,lastDay,'Choose a Day','dayMenu');
+	var oldYear =  today.getFullYear() - 125;
+	var thisYear = today.getFullYear()
+	createMenu(oldYear,thisYear,'Select Year','yearMenu');
+	createMenu(1,12, 'Select Month', 'monthMenu');
+	createMenu(25,1000, 'Select a Number', 'numMenu');
+}
+
+function createMenu(startNum,endNum,menuMsg,targetId)
+{
+	var strMsg = '<option value="' + menuMsg + '">'+ menuMsg +'</option>';
+	var counter = startNum;
+	while ( counter <= endNum)
+	{
+		strMsg += '<option value="' + counter + '">' + counter + '</option>';
+		counter++;
+	}
+	document.getElementById(targetId).innerHTML = strMsg;
+}
+
+</script>
+
+</head>
+<body>
+
+<form method="get" action="#">
+
+<select name="day" id="dayMenu">
+</select>
+<br />
+<select name="year"  id="yearMenu">
+</select>
+<br />
+<select name="month" id="monthMenu">
+</select>
+<br />
+<select name="number" id="numMenu">
+</select>
+
+</form>
+
+<div id="validator">
+  <a href="http://validator.w3.org/nu/?doc=https://nbtl.mesacc.edu/jstokes/javascript/fixedfuntion.html">
+  HTML 5 VALIDATION </a>
+</div>
+</body>
+</html>
