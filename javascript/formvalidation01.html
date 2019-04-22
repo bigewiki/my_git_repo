@@ -1,33 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- First form validation. 4/20/2019
-          Jeff Stokes
-            CIS 166 -->
+<!-- First form validation.
+          4/20/2019
+              Jeff Stokes
+                    CIS 166 -->
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="dcterms.rightsHolder" content="Jeff E. Stokes" />
-  <script src="formvalidation01.js" charset="utf-8"></script>
   <link rel="stylesheet" href="formvalidation01.css">
   <title>Form Validation</title>
-  <script>
-    window.onload = setupStuff;
-    // these two functions create the menus
-    setupStuff();
-    createMenu();
-    // this function creates the validator link at the bottom
-    createValidator();
-    // this function checks to see if the radio buttons are selected
-    radioCheck();
-
-
-
-    document.getElementById('radioButtonsE').onclick = radioCheck;
-	  document.getElementById('radioButtonsE').onmouseover = radioCheck;
-  </script>
 
 </head>
 
@@ -76,24 +61,24 @@
         <input type="radio" name="option" value="blonde"> Blonde
         <input type="radio" name="option" value="lager"> Lager
 
-
         <p>Favorite cocktail?</p>
-        <input type="radio" name="option" value="moscowMule"> Moscow Mule
-        <input type="radio" name="option" value="whiskeySour">Whiskey Sour
-        <input type="radio" name="option" value="margarita"> Margarita
-        <input type="radio" name="option" value="bloodyMary"> Bloody Mary
+        <input type="radio" name="option2" value="moscowMule"> Moscow Mule
+        <input type="radio" name="option2" value="whiskeySour">Whiskey Sour
+        <input type="radio" name="option2" value="margarita"> Margarita
+        <input type="radio" name="option2" value="bloodyMary"> Bloody Mary
         <br><br>
+        <!-- span for error message -->
         <span id="radioButtonsE">You must choose one.</span>
 
       </fieldset>
       <fieldset>
         <legend>What types of vacations do you prefer?</legend>
         <p>Select all that apply.</p>
-        <input type="checkbox" name="option2" value="beach"> Days at the beach <br>
-        <input type="checkbox" name="option2" value="mountains"> Mountain getaway<br>
-        <input type="checkbox" name="option2" value="camping"> Camping <br>
-        <input type="checkbox" name="option2" value="roadTrip"> Road Trip <br>
-        <input type="checkbox" name="option2" value="fishing"> Fishing Trip <br>
+        <input type="checkbox" name="option3" value="beach"> Days at the beach <br>
+        <input type="checkbox" name="option3" value="mountains"> Mountain getaway<br>
+        <input type="checkbox" name="option3" value="camping"> Camping <br>
+        <input type="checkbox" name="option3" value="roadTrip"> Road Trip <br>
+        <input type="checkbox" name="option3" value="fishing"> Fishing Trip <br>
       </fieldset>
 
       <fieldset>
@@ -105,6 +90,19 @@
 
     </form>
   </div>
+  <script src="formvalidation01.js" type="text/javascript"></script>
+  <script>
+    window.onload = function() {
+      createValidator();
+      setupStuff();
+
+
+      document.getElementById('radioButtonsE').onclick = radioCheck;
+      document.getElementById('radioButtonsE').onmouseover = radioCheck;
+      document.getElementById('selectMenu').innerHTML = createMenu;
+    }
+  </script>
+
 
 </body>
 

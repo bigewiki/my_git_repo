@@ -33,8 +33,8 @@
   function radioCheck() {
     var drinkChoices = document.forms[0].radioButtons;
     var strMsg = "Don't forget the booze!";
-    for (var i = 0; i < drinkChoices.length; i++) {
-      if (drinkChoices[i].checked == true) {
+    for (var i = 0; i < drinkChoices.children.length; i++) {
+      if (drinkChoices.children[i].checked == true) {
         strMsg = "OK";
         break;
       }
