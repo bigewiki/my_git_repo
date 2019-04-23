@@ -6,7 +6,7 @@
     var thisYear = today.getFullYear()
     createMenu(oldYear, thisYear, 'Select Year', 'yearMenu');
     createMenu(1, 12, 'Select Month', 'monthMenu');
-    createMenu(25, 1000, 'Select a Number', 'numMenu');
+    //createMenu(25, 1000, 'Select a Number', 'numMenu');
 
   }
 
