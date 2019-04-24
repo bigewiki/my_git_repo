@@ -1,3 +1,13 @@
+  window.onload = function() {
+    setupStuff();
+    createValidator();
+
+    document.getElementById('radioButtonsE').onclick = radioCheck;
+    document.getElementById('radioButtonsE').onmouseover = radioCheck;
+  }
+
+
+
   function setupStuff() {
     var today = new Date();
     var lastDay = new Date(today.getFullYear(), today.getMonth() + 1, 0).getDate();
@@ -6,7 +16,7 @@
     var thisYear = today.getFullYear()
     createMenu(oldYear, thisYear, 'Select Year', 'yearMenu');
     createMenu(1, 12, 'Select Month', 'monthMenu');
-    //createMenu(25, 1000, 'Select a Number', 'numMenu');
+
 
   }
 
@@ -25,7 +35,7 @@
     var myURL = window.location.href;
     var validatorLink = '<a href="http://validator.w3.org/nu/?doc=';
     validatorLink += myURL;
-    validatorLink += '">HTML 5 Validator</a>';
+    validatorLink += '"><img src="images/html5icon.jpg" alt="html5 icon validator" style="width: 50px; height: 50px; border: 0;"></a>';
     console.log(validatorLink);
     document.getElementById('validator').innerHTML = validatorLink;
   }
