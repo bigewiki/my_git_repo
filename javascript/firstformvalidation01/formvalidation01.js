@@ -4,6 +4,8 @@
 
     document.getElementById('radioButtonsE').onclick = radioCheck;
     document.getElementById('radioButtonsE').onmouseover = radioCheck;
+    document.getElementById("comments").onkeyup = charsLeft;
+
   }
 
 
@@ -50,5 +52,25 @@
       }
     }
     document.getElementById('radioButtonsE').innerHTML = strMsg;
+  }
+
+  function charsLeft() {
+    var charlimit = 500;
+    var amtTyped = document.getElementById("comments").value.length;
+    var numcharsleft = charlimit - amtTyped;
+    if (numcharsleft <= charlimit && numcharsleft > 0) {
+      var strMsg = "You have " + numcharsleft + " left to type";
+
+      document.getElementById("comLength").innerHTML = strMsg;
+    } else {
+      var strMsg = "You have reached my limit";
+
+      document.getElementById("comLength").innerHTML = strMsg;
+      document.getElementById("comments").value =
+      document.getElementById("comments").value.substr(0, charlimit - 1);
+    }
+  }
+
+  function validateDOB() {
 
   }

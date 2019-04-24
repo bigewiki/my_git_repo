@@ -46,11 +46,15 @@
             <select name="month" id="monthMenu">
             </select>
             <br />
+            <span id="selectDOB"></span>
           </div>
         </fieldset>
+        <!-- textarea for comments -->
         <fieldset>
           <legend>Comments</legend>
-          <textarea name="comments" rows="8" cols="80" maxlength="500" placeholder="Enter your comments here."></textarea>
+          <textarea id="comments" name="comments" rows="8" cols="80" maxlength="500"
+             placeholder="Enter your comments here. Limit 500 characters."></textarea>
+             <span id="comLength">500</span>
         </fieldset>
         <fieldset id="radioButtons">
           <legend>A little about yourself</legend>
