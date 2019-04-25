@@ -22,16 +22,18 @@
         <!-- fieldsets seperating each section of the form -->
         <fieldset>
           <legend>Personal Information</legend>
-          <label for="name">Name</label>
-          <input type="text" id="fname" name="name" minimumlength="3" required><span id="nameCheck"> *</span> <br />
+          <label for="fname">Name</label>
+          <input type="text" id="fname" name="name"  required><span id="nameCheck"> *</span> <br />
           <br>
-          <label for="quantity">Quantity</label>
+          <label for="number">Quantity</label>
           <input type="text" id="number" name="quantity"><span id="numCheck"></span> <br />
           <br>
-          <label for="password">Password</label>
-          <input type="password" id="secret" name="password" minimumlength="8" maxlength="25" required><span id="passCheck"> *</span> <br />
+          <label for="secret">Password</label>
+          <input type="password" id="secret" name="password" maxlength="25" required><span id="passCheck"> *</span> <br />
           <br>
         </fieldset>
+
+        <!-- TODO: Set validation for this section -->
 
         <!-- menu created by createMenu() function -->
         <fieldset id="selectMenu">
