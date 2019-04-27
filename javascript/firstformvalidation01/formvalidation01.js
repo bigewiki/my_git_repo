@@ -72,5 +72,8 @@
   }
 
   function validateDOB() {
+     //document.getElementById('selectMenu').onchange = self.validateDOB;
+     var dob = document.getElementById('dayMenu, yearMenu, monthMenu');
+     dob.onchange =
 
   }
