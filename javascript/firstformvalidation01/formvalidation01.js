@@ -5,6 +5,9 @@
     document.getElementById('radioButtonsE').onclick = radioCheck;
     document.getElementById('radioButtonsE').onmouseover = radioCheck;
     document.getElementById("comments").onkeyup = charsLeft;
+    document.getElementById('check_boxes').addEventListener("mouseover", checkCheckbox);
+    document.getElementById('check_boxes').addEventListener("click", checkCheckbox);
+
 
   }
 
@@ -71,9 +74,16 @@
     }
   }
 
-  function validateDOB() {
-     //document.getElementById('selectMenu').onchange = self.validateDOB;
-     var dob = document.getElementById('dayMenu, yearMenu, monthMenu');
-     dob.onchange =
+  function validateCheckBoxes() {
+      var eMsg = "";
+      var chckbxes = document.getElementsByName('option3');
+      for (var i = 0; i < chckbxes.length; i++) {
+        eMsg = "";
+        if (chckbxes[i].checked == false) {
+          eMsg = "Choose at least one.";
+        }
+        document.getElementById('checkE').innerHTML = eMsg;
+      }
 
+    }
   }
