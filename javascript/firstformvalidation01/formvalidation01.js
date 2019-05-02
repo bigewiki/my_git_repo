@@ -5,8 +5,7 @@
     document.getElementById('radioButtonsE').onclick = radioCheck;
     document.getElementById('radioButtonsE').onmouseover = radioCheck;
     document.getElementById("comments").onkeyup = charsLeft;
-    document.getElementById('check_boxes').addEventListener("mouseover", checkCheckbox);
-    document.getElementById('check_boxes').addEventListener("click", checkCheckbox);
+    
 
 
   }
@@ -70,20 +69,6 @@
 
       document.getElementById("comLength").innerHTML = strMsg;
       document.getElementById("comments").value =
-      document.getElementById("comments").value.substr(0, charlimit - 1);
-    }
-  }
-
-  function validateCheckBoxes() {
-      var eMsg = "";
-      var chckbxes = document.getElementsByName('option3');
-      for (var i = 0; i < chckbxes.length; i++) {
-        eMsg = "";
-        if (chckbxes[i].checked == false) {
-          eMsg = "Choose at least one.";
-        }
-        document.getElementById('checkE').innerHTML = eMsg;
-      }
-
+        document.getElementById("comments").value.substr(0, charlimit - 1);
     }
   }
