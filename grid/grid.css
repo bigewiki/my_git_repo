@@ -1,0 +1,27 @@
+.site {
+  display: grid;
+  grid-template-columns: 2fx 1fx 1fx;
+  grid-template-rows: auto 1fx 3fx;
+}
+
+.header {
+  grid-column: 2/4;
+  grid-row: 2/3;
+  background-color: blue;
+}
+
+.page-title {
+  grid-column: 1/4;
+  grid-row: 1/2;
+  background-color: red;
+}
+
+.main-content {
+  grid-column: 1/2;
+  grid-row: 2/4;
+  background-color: green;
+}
+
+.sidebar {
+  grid-column:
+}

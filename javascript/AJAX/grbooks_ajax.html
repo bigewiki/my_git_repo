@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>GRBooks Ajax Test</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="dcterms.rightsHolder" content="Name of Copyright Holder" />
+<meta name="dcterms.dateCopyrighted" content="2012" />
+<meta name="description" content="A short description of the page" />
+<meta name="keywords" content="keywords describing this page, most search engines
+ignore this now due to abuse"/>
+<script src="grbooks.js" charset="utf-8"></script>
+</head>
+<body>
+
+
+<form method="get" action="#">
+<label for="year">Search by Year</label>
+<input type="text" name="yearbook" id="year" /><br />
+<label for="title">Search by title</label>
+<input type="text" name="booktitle" id="title" /><br />
+<label for="yearjson">Search by Year, JSON output</label>
+<input type="text" name="yearbookjson" id="yearjson" />
+</form>
+
+<div id="outputyear">This is search by year output</div>
+<div id="titleoutput">This is search by title output</div>
+<div id="yearout">This is search by year JSON output</div>
+</body>
+</html>
