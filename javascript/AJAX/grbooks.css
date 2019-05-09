@@ -1,21 +1,45 @@
+
+
+.container {
+  border: solid 5px black;
+  border-radius: .3em;
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 2px 2px 3px rgba(150, 150, 150, 0.75);
+  margin-bottom: 6px;
+}
+
 .site {
   display: grid;
-  grid-template-rows: 2fr 1fr 1fr;
   grid-template-columns: 1fr 1fr;
 }
 
 .output {
-   grid-row: 2/3;
-   grid-column: 1/4;
- }
+  grid-row: 2/3;
+  grid-column: 1/4;
+  margin-bottom: 6px;
+}
 
 table, tr, th, td {
   border: solid 2px black;
+  border-radius: .3em;
 }
 
+label, legend {
+  /* display: block; */
+  margin-left: 3px;
+  padding-top: 2px;
+  text-shadow: 2px 2px 3px rgba(150, 150, 150, 0.75);
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: .9em;
+}
 
+fieldset {
+  border-style: solid 2px black;
+  border-radius: .3em
+}
 
 #validator {
-  margin-left: auto;
-  margin-right: auto;
+  text-align: center;
 }

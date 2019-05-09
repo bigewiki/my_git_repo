@@ -21,46 +21,49 @@
 <body>
 
 
-  <form method="get" action="#">
-    <div class="site">
-      <div class="search">
-        <fieldset>
-          <legend>Search</legend>
-          <label for="year">Search by Year</label>
-          <input type="text" name="yearbook" id="year" /><br />
-          <label for="title">Search by title</label>
-          <input type="text" name="booktitle" id="title" /><br />
-          <label for="author">Search By Author</label>
-          <input type="text" name="byauthor" id="author" /><br />
-        </fieldset>
-      </div>
-      <div class="jsonsearch">
-        <fieldset>
-          <legend>JSON Search</legend>
-          <label for="yearjson">Search by Year, JSON</label>
-          <input type="text" name="yearbookjson" id="yearjson" /><br />
-          <label for="titlejson">Search by Title, JSON</label>
-          <input type="text" name="titlebookjson" id="titlejson" /><br />
-          <label for="authorjson">Search by Author, JSON</label>
-          <input type="text" name="authorbookjson" id="authorjson" /><br />
-        </fieldset>
-      </div>
-    </form>
 
-    <br />
-    <div class="output">
-      <fieldset>
-        <legend>Output</legend>
-        <div id="outputyear"></div>
-        <div id="titleoutput"></div>
-        <div id="authoroutput"></div>
-        <div id="yearout"></div>
-        <div id="titleout"></div>
-        <div id="authorout"></div>
-      </fieldset>
+  <div class="container">
+    <div>
+      <form class="site" method="get" action="#">
+        <div class="search">
+          <fieldset>
+            <legend>Search</legend>
+            <label for="year">Search by Year</label>
+            <input type="text" name="yearbook" id="year" /><br />
+            <label for="title">Search by title</label>
+            <input type="text" name="booktitle" id="title" /><br />
+            <label for="author">Search By Author</label>
+            <input type="text" name="byauthor" id="author" /><br />
+          </fieldset>
+        </div>
+        <div class="jsonsearch">
+          <fieldset>
+            <legend>JSON Search</legend>
+            <label for="yearjson">Search by Year, JSON</label>
+            <input type="text" name="yearbookjson" id="yearjson" /><br />
+            <label for="titlejson">Search by Title, JSON</label>
+            <input type="text" name="titlebookjson" id="titlejson" /><br />
+            <label for="authorjson">Search by Author, JSON</label>
+            <input type="text" name="authorbookjson" id="authorjson" /><br />
+          </fieldset>
+        </div>
+      </form>
+
+      <br />
+      <div class="output">
+        <fieldset>
+          <legend>Output</legend>
+          <div id="outputyear"></div>
+          <div id="titleoutput"></div>
+          <div id="authoroutput"></div>
+          <div id="yearout"></div>
+          <div id="titleout"></div>
+          <div id="authorout"></div>
+        </fieldset>
+      </div>
     </div>
-  <div id="validator"></div>
   </div>
+  <div id="validator"></div>
 </body>
 
 </html>
