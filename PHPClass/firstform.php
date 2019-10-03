@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nameErr = "Name is required";
         $error = true;
   } else if (strlen($_POST["name"] > 30)) {
-                $nameErr = "Why such a long name?";
+                $nameErr = "Cool it John Jacob yada yada yada!";
                 $error = true;
         } else {
         $name = test_input($_POST["name"]);
@@ -57,8 +57,8 @@ function test_input($data) {
 <?php
         if ($_POST["submit"] && !$error){
                 echo "<h2>Your Input:</h2>";
-                if (strtolower($_POST["name"]) == "tony") {
-                        echo "Hey there " . $name . ", you sexy beast!";
+                if (strtolower($_POST["name"]) == "jeff") {
+                        echo "Hey there " . $name . ", come on in!";
                 } else {
                         echo "Hey there " . trim($name) . "!";
                 }
@@ -73,7 +73,7 @@ function test_input($data) {
                         $number++;
                 }
                 echo "<br><br>";
-                echo "You identify as " . $os . ":";
+                echo "You prefer to use " . $os . ":";
                 echo "<br>";
 
                 switch($os)
@@ -91,7 +91,7 @@ function test_input($data) {
                                 break;
                 }
         } else {
-                include("index.php");
+                include("form2.php");
         }
         echo "<br><br>";
         echo date("l, F j, o");
