@@ -3,7 +3,11 @@
 <head>
 <title>Form</title>
 <style>
-.error {color: #FF0000;}
+    .error {
+      Width: 100%;
+      color: #FFFFFF;
+      background-color: #FF0000;
+    }
 </style>
 </head>
 <body>
@@ -16,15 +20,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if (empty($_POST["name"])) {
     $nameErr = "Name is required";
         $error = true;
-  } else if (strlen($_POST["name"] > 30)) {
+  } else if (strlen($_POST["name"]) > 30) {
                 $nameErr = "Cool it John Jacob yada yada yada!";
                 $error = true;
         } else {
         $name = test_input($_POST["name"]);
-
-    if (!preg_match("/^[a-zA-Z ]*$/",$name)) {
-      $nameErr = "Only letters and white space allowed";
-    }
   }
 
   if (empty($_POST["age"])) {
@@ -87,7 +87,7 @@ function test_input($data) {
                 Linux users should check out this article!</a>';
                  break;
                         default:
-                                echo '<a href="https://medium.com/@i_AnkurBiswas/advantages-from-switching-windows-to-mac-f87139e0137e"> Windows huh? </a>'; <br/>
+                                echo '<a href="https://medium.com/@i_AnkurBiswas/advantages-from-switching-windows-to-mac-f87139e0137e"> Windows huh? </a>';
                                 break;
                 }
         } else {
@@ -98,7 +98,7 @@ function test_input($data) {
 ?>
         <br><br>
         <div id="validator">
-                <a href="http://validator.w3.org/nu/?doc=https://nbtl.mesacc.edu/jstokes/firstform.php">
+                <a href="http://validator.w3.org/nu/?doc=https://nbtl.mesacc.edu/jstokes/phpclass/firstform.php">
                 HTML 5 Validation</a>
         </div>
 
