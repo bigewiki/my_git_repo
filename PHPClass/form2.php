@@ -8,9 +8,9 @@
   <span class="error">* <?php echo $ageErr;?></span>
   <br><br>
   Favorite OS
-  <input type="radio" name="OS" <?php if (isset($os) && $os=="female") echo "checked";?> value="macos">MacOS
-  <input type="radio" name="OS" <?php if (isset($os && $os=="male") echo "checked";?> value="linux">Linux
-  <input type="radio" name="OS" <?php if (isset($os) && $os=="other") echo "checked";?> value="windows">Windows
+  <input type="radio" name="OS" <?php if (isset($os) && $os=="macos") echo "checked";?> value="macos">MacOS
+  <input type="radio" name="OS" <?php if (isset($os && $os=="linux") echo "checked";?> value="linux">Linux
+  <input type="radio" name="OS" <?php if (isset($os) && $os=="windows") echo "checked";?> value="windows">Windows
   <span class="error">* <?php echo $osErr;?></span>
   <br><br>
   <input type="submit" name="submit" value="Submit">
