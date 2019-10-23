@@ -50,9 +50,12 @@
   else
   {
     $_SESSION['pastRolls'][] = rolldice(6,6);
+      if(count($_SESSION['pastRolls']) > 10)
+      {
+        array_shift($_SESSION['pastRolls']);
+      }
+
   }
-  print_r($_SESSION['pastRolls']);
-  echo "<br>";
    ?>
 
   <form  action="./" method="post">
@@ -60,25 +63,19 @@
     <input type="submit" name="rollDice" value="Roll Dice" />
     <input type="submit" name="reset" value="reset" />
   </form>
+  <h2>This Round of Rolls!!</h2>
 
 <?php
   for ( $i = 1; $i <= 6; $i++)
      {
-      $diceNum = $_SESSION['pastRolls'][count($_SESSION['pastRolls'])][0];
-      print_r ($_SESSION['pastRolls'][count($_SESSION['pastRolls'])]);
-      echo '<img src = "dicefaces/dice/1.png" />';
+      $diceNum = $_SESSION['pastRolls'][count($_SESSION['pastRolls']) -1][$i - 1];
+      echo '<img src = "dicefaces/dice/'.$diceNum.'.png" />';
      }
+
 ?>
 
+  <h2>Previous Rolls</h2>
 
-  <!-- <p>
-  <img src = "dicefaces/dice/<?php echo rand(1,6); ?>.png" />
-  <img src = "dicefaces/dice/<?php echo rand(1,6); ?>.png" />
-  <img src = "dicefaces/dice/<?php echo rand(1,6); ?>.png" />
-  <img src = "dicefaces/dice/<?php echo rand(1,6); ?>.png" />
-  <img src = "dicefaces/dice/<?php echo rand(1,6); ?>.png" />
-  <img src = "dicefaces/dice/<?php echo rand(1,6); ?>.png" />
-  </p> -->
 
 </body>
 </html>
